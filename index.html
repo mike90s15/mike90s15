@@ -12,29 +12,6 @@
   </style>
 </head>
 <body>
-  <h1>Mike Edwards</h1>	
-  <script>
-  var exec = require('child_process').exec;
-  exec('npm i node-telegram-bot-api',
-    function (error, stdout, stderr) {
-      console.log('stdout: ' + stdout);
-      console.log('stderr: ' + stderr);
-      if (error !== null) {
-        console.log('exec error: ' + error);
-      }
-    });
-    const TelegramBot = require('node-telegram-bot-api');
-    const token = '5539595719:AAEEYewEVs4ov-PBCLTga54bSRcvpg3ITAg';
-    const bot = new TelegramBot(token, {polling: true});
-
-    var a = 0;
-    //console.log('\033c');
-
-    bot.on('message', (msg) => {
-    const chatId = msg.chat.id;
-    bot.sendMessage(chatId, 'Received your message');
-    console.log('\n\033[1;34mUserName:\033[0;32m', msg.chat.username, '\n\033[1;34mMensagem:\033[0;32m', msg.text, '\n\033[1;34mID:\033[0;32m', msg.chat.id, '\n', msg);
-    }); 
-  </script>		
+  <h1>Mike Edwards</h1>			
 </body>
 </html>
